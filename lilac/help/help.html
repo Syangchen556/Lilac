@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow-lg animate-pop">
+        <h1 class="text-center text-primary">AI Chatbot Help</h1>
+
+        <!-- Search Bar -->
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for help..." onkeyup="searchHelp()" />
+        </div>
+
+        <!-- Accordion for Help Topics -->
+        <div id="help-accordion" class="accordion">
+            <div class="accordion-item" class="accordion-question">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How do I start a conversation with the chatbot?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#help-accordion">
+                    <div class="accordion-body">
+                        To start a conversation, simply type your query in the chat box and press Enter or click the "Send" button. The chatbot will respond with the relevant information.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How do I reset the conversation?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#help-accordion">
+                    <div class="accordion-body">
+                        If you'd like to reset the conversation, simply click the "Reset Chat" button at the bottom of the chat interface. This will clear all previous messages.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How do I report an issue with the chatbot?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#help-accordion">
+                    <div class="accordion-body">
+                        If you're facing any issues, please visit the "Contact Us" section and submit your feedback or issue. Our team will get back to you as soon as possible.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How do I change my chatbot settings?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#help-accordion">
+                    <div class="accordion-body">
+                        To change the settings, go to the "Settings" section in the main menu. You can modify preferences like language, notification preferences, and theme.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <a href="../lilac/lilac.html" class="btn btn-secondary">Back</a>
+            <button class="btn btn-primary" onclick="resetChat()">Reset Chat</button>
+        </div>
+    </div>
+    <script src="js/help.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

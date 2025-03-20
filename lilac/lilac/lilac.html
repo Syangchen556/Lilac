@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Lilac</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+
+<body>
+<div class="chat-container">
+
+    <!-- Sidebar (Initially Hidden) -->
+    <div class="sidebar" id="sidebar">
+        <!-- Menu and Profile Section (Aligned Horizontally) -->
+        <div class="sidebar-header">
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+            <!-- Profile Menu -->
+            <div class="profile-menu">
+                <img src="../data/profile.png" class="profile-pic dropdown-toggle" id="profileMenuButton" alt="Profile" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="dropdown-menu" aria-labelledby="profileMenuButton">
+                    <li><a class="dropdown-item" href="../customize/customize.html">Customize</a></li>
+                    <li><a class="dropdown-item" href="../setting/setting.html">Settings</a></li>
+                    <li><a class="dropdown-item" href="../login/login.html">Log-in</a></li> <!-- Updated -->
+                    <li><a class="dropdown-item" href="../help/help.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Search Bar Inside Sidebar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search history..." oninput="filterHistory()">
+        </div>
+
+        <!-- Search History List -->
+        <ul class="search-history" id="historyList"></ul>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chatbox" id="chatBox">
+        <div class="chat-header">
+            <!-- Sidebar Toggle Button -->
+            <button class="btn btn-light" onclick="toggleSidebar()">☰</button>
+
+            <span class="chat-title">Lilac - AI Chatbot</span>
+
+            <!-- AI Avatar (Top Right Corner) -->
+            <div class="ai-avatar">
+                <img src="../data/ai-avatar.png" alt="AI Avatar">
+            </div>
+        </div>
+
+        <!-- Chat Output -->
+        <div class="chat-output" id="chatOutput"></div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/lilac.js"></script> <!-- External JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* General Styling */
+body {
+    background-color: #e8a8e5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Chat Container */
+.chat-container {
+    display: flex;
+    height: 100vh;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    background: #343a40;
+    color: white;
+    padding: 15px;
+    padding-top: 15px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Sidebar Header (Menu and Profile Picture) */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Profile Menu */
+.profile-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Menu Button */
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 15px 0;
+}
+
+/* Show Sidebar */
+.sidebar.active {
+    left: 0;
+}
+
+/* Search Bar */
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.search-bar {
+    margin-top: 10px;
+}
+
+/* Search History List */
+.search-history {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.search-history li {
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #555;
+    color: white;
+}
+
+.search-history li:hover {
+    background: #495057;
+}
+
+/* Chat Box */
+.chatbox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-left: 0;
+    height: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Chat Header */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f8f9fa;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 500;
+}
+
+/* AI Avatar (Top Right Corner) */
+.ai-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Chat Output */
+.chat-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: rgb(199, 127, 199);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* User's Message (Aligned to the Right) */
+.chat-output .user-message {
+    align-self: flex-end; /* Aligns user messages to the right */
+    background-color: #7d478c; /* User's message color */
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* AI's Response (Aligned to the Left) */
+.chat-output .ai-message {
+    align-self: flex-start; /* Aligns AI messages to the left */
+    background-color: #b773d1; /* AI's message color */
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.chat-input button {
+    background-color: #7d478c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #5b3067;
+}

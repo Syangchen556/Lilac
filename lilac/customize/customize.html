@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize ChatGPT</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="header-text text-center">Customize ChatGPT</h1>
+
+        <!-- Customization Form (Floating Modal) -->
+        <div class="customization-modal" id="customizationModal">
+            <h4>Introduce yourself to get better, more personalized responses</h4>
+            <form id="customizationForm">
+                <div class="form-group">
+                    <label for="userName">What should Lilac call you?</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="userOccupation">What do you do?</label>
+                    <input type="text" class="form-control" id="userOccupation" placeholder="Enter your occupation">
+                </div>
+                <div class="form-group">
+                    <label for="botTone">How do you want your AI bot to be?</label>
+                    <select class="form-control" id="botTone">
+                        <option value="friendly">Friendly</option>
+                        <option value="formal">Formal</option>
+                        <option value="casual">Casual</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-custom btn-block">Save Customization</button>
+            </form>
+
+            <!-- Back Button -->
+            <button class="btn btn-secondary mt-3" onclick="goBackToChatbot()">Back to Chatbot</button>
+        </div>
+
+        <!-- Chatbox (Visible after customization) -->
+        <div class="chat-container mt-4" id="chatContainer" style="display: none;">
+            <h4 id="personalizedGreeting"></h4>
+            <div class="chat-output" id="chatOutput"></div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+            <!-- Save Changes Button -->
+            <button class="btn btn-success mt-3" onclick="saveChanges()" style="display: none;" id="saveChangesBtn">Save Changes</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Link to custom JS -->
+    <script src="../js/custom.js"></script>
+</body>
+
+</html>

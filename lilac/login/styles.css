@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    background: linear-gradient(to right, #E6E6FA, #D8BFD8);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Card Container */
+.card {
+    width: 100%;
+    max-width: 400px; /* Increased width of the card */
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for a cleaner look */
+    background: white;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between elements */
+}
+
+/* Headings */
+h2 {
+    font-weight: bold;
+    color: #6A0DAD;
+    text-align: center; /* Center heading */
+    margin-bottom: 20px; /* Added margin to create space below the heading */
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%; /* Full width of the card */
+    padding: 12px; /* Increased padding for larger buttons */
+    font-size: 16px; /* Larger font size */
+    margin: 12px 0; /* Adjusted margin for spacing */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #9370DB;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #836FFF;
+}
+
+.btn-success {
+    background-color: #8A2BE2;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #7B1FA2;
+}
+
+/* Back Button */
+.back-btn {
+    background-color: #DDA0DD;
+    color: white;
+    border: none;
+}
+
+.back-btn:hover {
+    background-color: #BA55D3;
+}
+
+/* Forgot Password Button */
+.forgot-password {
+    background: none;
+    color: #9370DB;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content; /* Button width adjusts to content */
+    margin: 0 auto; /* Center the button */
+    padding: 0; /* No padding for the link-like button */
+}
+
+.forgot-password:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Form Fields */
+.form-floating input {
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px; /* Increased padding for larger input fields */
+    font-size: 16px; /* Larger font size for input fields */
+}
+
+/* Password Toggle Button */
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .card {
+        width: 90%; /* Smaller card width on small screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .btn {
+        font-size: 14px; /* Slightly smaller button font size on small screens */
+        padding: 10px; /* Slightly smaller padding for buttons */
+    }
+
+    .form-floating input {
+        font-size: 14px; /* Slightly smaller input field font size on small screens */
+    }
+}
